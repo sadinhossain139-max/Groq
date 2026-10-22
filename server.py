@@ -69,6 +69,7 @@ async def proxy_chat(request: Request, x_proxy_key: str = Header(None)):
     # 3. 🔀 Text vs Vision auto-route
     if has_image_content(body.get("messages")):
         body["model"] = GROQ_VISION_MODEL
+        body.setdefault("reasoning_effort", "low")
         print(f"[{PROXY_ID}] → VISION: {GROQ_VISION_MODEL}")
     else:
         body["model"] = GROQ_TEXT_MODEL
