@@ -15,7 +15,7 @@ PROXY_SECRET  = os.getenv("PROXY_SECRET", "")
 # ============ MODELS (HARDCODED) ============
 # এগুলো env-এ রাখার দরকার নেই — ৬ সার্ভারে একই
 GROQ_TEXT_MODEL   = "openai/gpt-oss-120b"
-GROQ_VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
+GROQ_VISION_MODEL = "qwen/qwen3.8-27b"
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
